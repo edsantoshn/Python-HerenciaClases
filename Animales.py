@@ -12,6 +12,7 @@ class Animales(object):
 		self.PartosAnimales=[]
 
 	def __Nacimientos(self,hembrasprenadas):
+		"""Clase privada solo puede ser accedida desde Self.Reproducir y no puede ser accedida de forma independiente, solamente se agrega __ (dos guiones bajo)"""
 		nacidos = (self.Reproduccion*hembrasprenadas)
 		self.CantidadAnimales+=nacidos
 		self.Partos.append(datetime.datetime.today())
