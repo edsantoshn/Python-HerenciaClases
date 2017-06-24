@@ -12,7 +12,10 @@ class Animales(object):
 		self.PartosAnimales=[]
 
 	def __Nacimientos(self,hembrasprenadas):
-		"""Clase privada solo puede ser accedida desde Self.Reproducir y no puede ser accedida de forma independiente, solamente se agrega __ (dos guiones bajo)"""
+		"""
+		Clase privada solo puede ser accedida desde Self.Reproducir y no puede ser accedida de forma independiente, solamente se agrega __ (dos guiones bajo)
+		Recibe la cantidad de hembras preñadas, luego multiplica dicha cantidad por animales que pueden tener por parto aumenta la cantidad de animales en la granja
+		"""
 		nacidos = (self.Reproduccion*hembrasprenadas)
 		self.CantidadAnimales+=nacidos
 		self.Partos.append(datetime.datetime.today())
@@ -20,6 +23,7 @@ class Animales(object):
 		print("Tiene {0} nuevos animales, ahora posee {1}".format(nacidos,self.CantidadAnimales))
 
 	def Repoducir(self,cantidadanimales):
+		"""Recibe la cantidad de animales preñados, verifica si es menor a la cantidad existentes en la granja y accede a la funcion __Nacimientos"""
 		if(self.CantidadAnimales>cantidadanimales):
 			self.__Nacimientos(cantidadanimales)
 		else:
@@ -33,6 +37,7 @@ class Animales(object):
 			print("La cantidad de animales fallecidos no puede ser superior a la cantidad de animales en la granja")
 
 	def ImprimirPartos(self):
+		"""Imprime la cantidad de partos que existe en la granja"""
 		print("Cantidad\tFecha de Nacimiento")
 		rango = len(self.Partos)
 		if(rango>0):
