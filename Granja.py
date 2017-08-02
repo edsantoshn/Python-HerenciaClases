@@ -14,25 +14,25 @@ cantidad_conejos_input = int(input('Ingrese la cantidad de conejos existe: '))
 cantidad_conejos_parto_input = int(input('Ingrese la cantidad de conejos por parto: '))
 conejos = crear_conejos(cantidad_conejos_input,cantidad_conejos_parto_input)
 
-conejos.Repoducir(4)
-conejos.Repoducir(4)
-conejos.Repoducir(14)
-conejos.Repoducir(10)
+conejos.repoducir(4)
+conejos.repoducir(4)
+conejos.repoducir(14)
+conejos.repoducir(10)
 #Funcion heredada de la clase Animales
-conejos.Alimentarse("Pasto",100)
+conejos.alimentarse("Pasto",100)
 
-conejos.ImprimirPartos()
+conejos.imprimir_partos()
 
 
 cantidad_elefantes_input = int(input('Ingrese la cantidad de elefantes existe: '))
 cantidad_elefantes_parto_input = int(input('Ingrese la cantidad de elefantes por parto: '))
 elefante = crear_elefantes(cantidad_elefantes_input,cantidad_elefantes_parto_input)
 
-elefante.Repoducir(6)
-elefante.Repoducir(4)
-elefante.Repoducir(8)
-elefante.Repoducir(12)
+elefante.repoducir(6)
+elefante.repoducir(4)
+elefante.repoducir(8)
+elefante.repoducir(12)
 
-elefante.TomarAgua("Limpia",100)
+elefante.tomar_agua("Limpia",100)
 
-elefante.ImprimirPartos()
+elefante.imprimir_partos()
